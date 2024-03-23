@@ -126,6 +126,8 @@
     <ClInclude Include="Calculadora.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="funtras.h" />
+    <ClInclude Include="Header.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Calculadora.resx">
