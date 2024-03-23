@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 namespace Calculadora {
 
@@ -19,13 +19,13 @@ namespace Calculadora {
 		{
 			InitializeComponent();
 			//
-			//TODO: agregar código de constructor aquí
+			//TODO: agregar cÃ³digo de constructor aquÃ­
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Limpiar los recursos que se estén usando.
+		/// Limpiar los recursos que se estÃ©n usando.
 		/// </summary>
 		~Calculadora()
 		{
@@ -67,17 +67,18 @@ namespace Calculadora {
 
 	private:
 		/// <summary>
-		/// Variable del diseñador necesaria.
+		/// Variable del diseÃ±ador necesaria.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Método necesario para admitir el Diseñador. No se puede modificar
-		/// el contenido de este método con el editor de código.
+		/// MÃ©todo necesario para admitir el DiseÃ±ador. No se puede modificar
+		/// el contenido de este mÃ©todo con el editor de cÃ³digo.
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Calculadora::typeid));
 			this->ValorX = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
@@ -143,174 +144,196 @@ namespace Calculadora {
 			// 
 			// button1
 			// 
+			this->button1->BackColor = System::Drawing::Color::BlueViolet;
 			this->button1->Location = System::Drawing::Point(36, 156);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(75, 23);
 			this->button1->TabIndex = 4;
-			this->button1->Text = L"button1";
-			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Text = L"x^-1";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &Calculadora::button1_Click);
 			// 
 			// button2
 			// 
+			this->button2->BackColor = System::Drawing::Color::BlueViolet;
 			this->button2->Location = System::Drawing::Point(134, 155);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(75, 23);
 			this->button2->TabIndex = 5;
-			this->button2->Text = L"button2";
-			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Text = L"sin(x) ";
+			this->button2->UseVisualStyleBackColor = false;
 			// 
 			// button3
 			// 
+			this->button3->BackColor = System::Drawing::Color::BlueViolet;
 			this->button3->Location = System::Drawing::Point(244, 154);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(75, 23);
 			this->button3->TabIndex = 6;
-			this->button3->Text = L"button3";
-			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Text = L"tan(x)";
+			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &Calculadora::button3_Click);
 			// 
 			// button4
 			// 
+			this->button4->BackColor = System::Drawing::Color::BlueViolet;
 			this->button4->Location = System::Drawing::Point(373, 153);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(75, 23);
 			this->button4->TabIndex = 7;
-			this->button4->Text = L"button4";
-			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Text = L"logy(x)";
+			this->button4->UseVisualStyleBackColor = false;
 			// 
 			// button5
 			// 
+			this->button5->BackColor = System::Drawing::Color::BlueViolet;
 			this->button5->Location = System::Drawing::Point(36, 231);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(75, 23);
 			this->button5->TabIndex = 8;
-			this->button5->Text = L"button5";
-			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Text = L"sinh(x) ";
+			this->button5->UseVisualStyleBackColor = false;
 			// 
 			// button6
 			// 
+			this->button6->BackColor = System::Drawing::Color::BlueViolet;
 			this->button6->Location = System::Drawing::Point(134, 230);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(75, 23);
 			this->button6->TabIndex = 9;
-			this->button6->Text = L"button6";
-			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Text = L"tanh(x) ";
+			this->button6->UseVisualStyleBackColor = false;
 			// 
 			// button7
 			// 
+			this->button7->BackColor = System::Drawing::Color::BlueViolet;
 			this->button7->Location = System::Drawing::Point(244, 230);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(75, 23);
 			this->button7->TabIndex = 10;
-			this->button7->Text = L"button7";
-			this->button7->UseVisualStyleBackColor = true;
+			this->button7->Text = L"yâˆš x";
+			this->button7->UseVisualStyleBackColor = false;
 			// 
 			// button8
 			// 
+			this->button8->BackColor = System::Drawing::Color::BlueViolet;
 			this->button8->Location = System::Drawing::Point(373, 230);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(75, 23);
 			this->button8->TabIndex = 11;
-			this->button8->Text = L"button8";
-			this->button8->UseVisualStyleBackColor = true;
+			this->button8->Text = L"tan^âˆ’1(x)";
+			this->button8->UseVisualStyleBackColor = false;
 			// 
 			// button9
 			// 
+			this->button9->BackColor = System::Drawing::Color::BlueViolet;
 			this->button9->Location = System::Drawing::Point(36, 301);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(75, 23);
 			this->button9->TabIndex = 12;
-			this->button9->Text = L"button9";
-			this->button9->UseVisualStyleBackColor = true;
+			this->button9->Text = L"sec(x) ";
+			this->button9->UseVisualStyleBackColor = false;
 			// 
 			// button10
 			// 
+			this->button10->BackColor = System::Drawing::Color::BlueViolet;
 			this->button10->Location = System::Drawing::Point(134, 300);
 			this->button10->Name = L"button10";
 			this->button10->Size = System::Drawing::Size(75, 23);
 			this->button10->TabIndex = 13;
-			this->button10->Text = L"button10";
-			this->button10->UseVisualStyleBackColor = true;
+			this->button10->Text = L"csc(x) ";
+			this->button10->UseVisualStyleBackColor = false;
 			// 
 			// button11
 			// 
+			this->button11->BackColor = System::Drawing::Color::BlueViolet;
 			this->button11->Location = System::Drawing::Point(244, 299);
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(75, 23);
 			this->button11->TabIndex = 14;
-			this->button11->Text = L"button11";
-			this->button11->UseVisualStyleBackColor = true;
+			this->button11->Text = L"e^x";
+			this->button11->UseVisualStyleBackColor = false;
+			this->button11->Click += gcnew System::EventHandler(this, &Calculadora::button11_Click);
 			// 
 			// button12
 			// 
+			this->button12->BackColor = System::Drawing::Color::BlueViolet;
 			this->button12->Location = System::Drawing::Point(373, 300);
 			this->button12->Name = L"button12";
 			this->button12->Size = System::Drawing::Size(75, 23);
 			this->button12->TabIndex = 15;
-			this->button12->Text = L"button12";
-			this->button12->UseVisualStyleBackColor = true;
+			this->button12->Text = L"cos(x) ";
+			this->button12->UseVisualStyleBackColor = false;
 			// 
 			// button13
 			// 
+			this->button13->BackColor = System::Drawing::Color::BlueViolet;
 			this->button13->Location = System::Drawing::Point(36, 378);
 			this->button13->Name = L"button13";
 			this->button13->Size = System::Drawing::Size(75, 23);
 			this->button13->TabIndex = 16;
-			this->button13->Text = L"button13";
-			this->button13->UseVisualStyleBackColor = true;
+			this->button13->Text = L"ln(x)";
+			this->button13->UseVisualStyleBackColor = false;
 			// 
 			// button14
 			// 
+			this->button14->BackColor = System::Drawing::Color::BlueViolet;
 			this->button14->Location = System::Drawing::Point(134, 377);
 			this->button14->Name = L"button14";
 			this->button14->Size = System::Drawing::Size(75, 23);
 			this->button14->TabIndex = 17;
-			this->button14->Text = L"button14";
-			this->button14->UseVisualStyleBackColor = true;
+			this->button14->Text = L"x^y";
+			this->button14->UseVisualStyleBackColor = false;
 			// 
 			// button15
 			// 
+			this->button15->BackColor = System::Drawing::Color::BlueViolet;
 			this->button15->Location = System::Drawing::Point(244, 377);
 			this->button15->Name = L"button15";
 			this->button15->Size = System::Drawing::Size(75, 23);
 			this->button15->TabIndex = 18;
-			this->button15->Text = L"button15";
-			this->button15->UseVisualStyleBackColor = true;
+			this->button15->Text = L"cosh(x) ";
+			this->button15->UseVisualStyleBackColor = false;
 			// 
 			// button16
 			// 
+			this->button16->BackColor = System::Drawing::Color::BlueViolet;
 			this->button16->Location = System::Drawing::Point(373, 377);
 			this->button16->Name = L"button16";
 			this->button16->Size = System::Drawing::Size(75, 23);
 			this->button16->TabIndex = 19;
-			this->button16->Text = L"button16";
-			this->button16->UseVisualStyleBackColor = true;
+			this->button16->Text = L"âˆšx";
+			this->button16->UseVisualStyleBackColor = false;
 			// 
 			// button17
 			// 
+			this->button17->BackColor = System::Drawing::Color::BlueViolet;
 			this->button17->Location = System::Drawing::Point(36, 441);
 			this->button17->Name = L"button17";
 			this->button17->Size = System::Drawing::Size(75, 23);
 			this->button17->TabIndex = 20;
-			this->button17->Text = L"button17";
-			this->button17->UseVisualStyleBackColor = true;
+			this->button17->Text = L"sin^âˆ’1\r\n(x) ";
+			this->button17->UseVisualStyleBackColor = false;
 			// 
 			// button18
 			// 
+			this->button18->BackColor = System::Drawing::Color::BlueViolet;
 			this->button18->Location = System::Drawing::Point(134, 440);
 			this->button18->Name = L"button18";
 			this->button18->Size = System::Drawing::Size(75, 23);
 			this->button18->TabIndex = 21;
-			this->button18->Text = L"button18";
-			this->button18->UseVisualStyleBackColor = true;
+			this->button18->Text = L"cos^âˆ’1\r\n(x)";
+			this->button18->UseVisualStyleBackColor = false;
 			// 
 			// button19
 			// 
+			this->button19->BackColor = System::Drawing::Color::BlueViolet;
 			this->button19->Location = System::Drawing::Point(244, 440);
 			this->button19->Name = L"button19";
 			this->button19->Size = System::Drawing::Size(75, 23);
 			this->button19->TabIndex = 22;
-			this->button19->Text = L"button19";
-			this->button19->UseVisualStyleBackColor = true;
+			this->button19->Text = L"cot(x) ";
+			this->button19->UseVisualStyleBackColor = false;
 			// 
 			// button20
 			// 
@@ -318,12 +341,13 @@ namespace Calculadora {
 			this->button20->Name = L"button20";
 			this->button20->Size = System::Drawing::Size(75, 23);
 			this->button20->TabIndex = 23;
-			this->button20->Text = L"button20";
+			this->button20->Text = L"Limpiar";
 			this->button20->UseVisualStyleBackColor = true;
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->label1->Location = System::Drawing::Point(63, 94);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(55, 13);
@@ -334,6 +358,8 @@ namespace Calculadora {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::SystemColors::ControlText;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(499, 541);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button20);
@@ -376,5 +402,11 @@ namespace Calculadora {
 	}
 	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
