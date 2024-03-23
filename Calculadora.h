@@ -78,7 +78,6 @@ namespace Calculadora {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Calculadora::typeid));
 			this->ValorX = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
@@ -144,7 +143,7 @@ namespace Calculadora {
 			// 
 			// button1
 			// 
-			this->button1->BackColor = System::Drawing::Color::BlueViolet;
+			this->button1->BackColor = System::Drawing::Color::Thistle;
 			this->button1->Location = System::Drawing::Point(36, 156);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(75, 23);
@@ -155,7 +154,7 @@ namespace Calculadora {
 			// 
 			// button2
 			// 
-			this->button2->BackColor = System::Drawing::Color::BlueViolet;
+			this->button2->BackColor = System::Drawing::Color::Thistle;
 			this->button2->Location = System::Drawing::Point(134, 155);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(75, 23);
@@ -165,7 +164,7 @@ namespace Calculadora {
 			// 
 			// button3
 			// 
-			this->button3->BackColor = System::Drawing::Color::BlueViolet;
+			this->button3->BackColor = System::Drawing::Color::Thistle;
 			this->button3->Location = System::Drawing::Point(244, 154);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(75, 23);
@@ -176,7 +175,7 @@ namespace Calculadora {
 			// 
 			// button4
 			// 
-			this->button4->BackColor = System::Drawing::Color::BlueViolet;
+			this->button4->BackColor = System::Drawing::Color::Thistle;
 			this->button4->Location = System::Drawing::Point(373, 153);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(75, 23);
@@ -186,7 +185,7 @@ namespace Calculadora {
 			// 
 			// button5
 			// 
-			this->button5->BackColor = System::Drawing::Color::BlueViolet;
+			this->button5->BackColor = System::Drawing::Color::Thistle;
 			this->button5->Location = System::Drawing::Point(36, 231);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(75, 23);
@@ -196,7 +195,7 @@ namespace Calculadora {
 			// 
 			// button6
 			// 
-			this->button6->BackColor = System::Drawing::Color::BlueViolet;
+			this->button6->BackColor = System::Drawing::Color::Thistle;
 			this->button6->Location = System::Drawing::Point(134, 230);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(75, 23);
@@ -206,7 +205,7 @@ namespace Calculadora {
 			// 
 			// button7
 			// 
-			this->button7->BackColor = System::Drawing::Color::BlueViolet;
+			this->button7->BackColor = System::Drawing::Color::Thistle;
 			this->button7->Location = System::Drawing::Point(244, 230);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(75, 23);
@@ -216,7 +215,7 @@ namespace Calculadora {
 			// 
 			// button8
 			// 
-			this->button8->BackColor = System::Drawing::Color::BlueViolet;
+			this->button8->BackColor = System::Drawing::Color::Thistle;
 			this->button8->Location = System::Drawing::Point(373, 230);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(75, 23);
@@ -226,7 +225,7 @@ namespace Calculadora {
 			// 
 			// button9
 			// 
-			this->button9->BackColor = System::Drawing::Color::BlueViolet;
+			this->button9->BackColor = System::Drawing::Color::Thistle;
 			this->button9->Location = System::Drawing::Point(36, 301);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(75, 23);
@@ -236,7 +235,7 @@ namespace Calculadora {
 			// 
 			// button10
 			// 
-			this->button10->BackColor = System::Drawing::Color::BlueViolet;
+			this->button10->BackColor = System::Drawing::Color::Thistle;
 			this->button10->Location = System::Drawing::Point(134, 300);
 			this->button10->Name = L"button10";
 			this->button10->Size = System::Drawing::Size(75, 23);
@@ -246,7 +245,7 @@ namespace Calculadora {
 			// 
 			// button11
 			// 
-			this->button11->BackColor = System::Drawing::Color::BlueViolet;
+			this->button11->BackColor = System::Drawing::Color::Thistle;
 			this->button11->Location = System::Drawing::Point(244, 299);
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(75, 23);
@@ -257,7 +256,7 @@ namespace Calculadora {
 			// 
 			// button12
 			// 
-			this->button12->BackColor = System::Drawing::Color::BlueViolet;
+			this->button12->BackColor = System::Drawing::Color::Thistle;
 			this->button12->Location = System::Drawing::Point(373, 300);
 			this->button12->Name = L"button12";
 			this->button12->Size = System::Drawing::Size(75, 23);
@@ -267,7 +266,7 @@ namespace Calculadora {
 			// 
 			// button13
 			// 
-			this->button13->BackColor = System::Drawing::Color::BlueViolet;
+			this->button13->BackColor = System::Drawing::Color::Thistle;
 			this->button13->Location = System::Drawing::Point(36, 378);
 			this->button13->Name = L"button13";
 			this->button13->Size = System::Drawing::Size(75, 23);
@@ -277,7 +276,7 @@ namespace Calculadora {
 			// 
 			// button14
 			// 
-			this->button14->BackColor = System::Drawing::Color::BlueViolet;
+			this->button14->BackColor = System::Drawing::Color::Thistle;
 			this->button14->Location = System::Drawing::Point(134, 377);
 			this->button14->Name = L"button14";
 			this->button14->Size = System::Drawing::Size(75, 23);
@@ -287,7 +286,7 @@ namespace Calculadora {
 			// 
 			// button15
 			// 
-			this->button15->BackColor = System::Drawing::Color::BlueViolet;
+			this->button15->BackColor = System::Drawing::Color::Thistle;
 			this->button15->Location = System::Drawing::Point(244, 377);
 			this->button15->Name = L"button15";
 			this->button15->Size = System::Drawing::Size(75, 23);
@@ -297,7 +296,7 @@ namespace Calculadora {
 			// 
 			// button16
 			// 
-			this->button16->BackColor = System::Drawing::Color::BlueViolet;
+			this->button16->BackColor = System::Drawing::Color::Thistle;
 			this->button16->Location = System::Drawing::Point(373, 377);
 			this->button16->Name = L"button16";
 			this->button16->Size = System::Drawing::Size(75, 23);
@@ -307,7 +306,7 @@ namespace Calculadora {
 			// 
 			// button17
 			// 
-			this->button17->BackColor = System::Drawing::Color::BlueViolet;
+			this->button17->BackColor = System::Drawing::Color::Thistle;
 			this->button17->Location = System::Drawing::Point(36, 441);
 			this->button17->Name = L"button17";
 			this->button17->Size = System::Drawing::Size(75, 23);
@@ -317,7 +316,7 @@ namespace Calculadora {
 			// 
 			// button18
 			// 
-			this->button18->BackColor = System::Drawing::Color::BlueViolet;
+			this->button18->BackColor = System::Drawing::Color::Thistle;
 			this->button18->Location = System::Drawing::Point(134, 440);
 			this->button18->Name = L"button18";
 			this->button18->Size = System::Drawing::Size(75, 23);
@@ -327,7 +326,7 @@ namespace Calculadora {
 			// 
 			// button19
 			// 
-			this->button19->BackColor = System::Drawing::Color::BlueViolet;
+			this->button19->BackColor = System::Drawing::Color::Thistle;
 			this->button19->Location = System::Drawing::Point(244, 440);
 			this->button19->Name = L"button19";
 			this->button19->Size = System::Drawing::Size(75, 23);
@@ -358,8 +357,7 @@ namespace Calculadora {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::SystemColors::ControlText;
-			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->ClientSize = System::Drawing::Size(499, 541);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button20);
