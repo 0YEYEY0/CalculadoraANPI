@@ -124,6 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="calculadora_funtras.cpp" />
+    <ClCompile Include="test_funtras.cpp" />
     <ClCompile Include="VentanaAyuda.cpp" />
   </ItemGroup>
   <ItemGroup>
