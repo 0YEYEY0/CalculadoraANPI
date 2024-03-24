@@ -3,6 +3,7 @@
 #include "funtras.h"
 
 int main() {
+    /**
     // Prueba de divit_t
     boost::multiprecision::cpp_dec_float_50 a_divit_t = -2.2;
     try {
@@ -31,7 +32,7 @@ int main() {
 
 
     // Ángulo en radianes
-    boost::multiprecision::cpp_dec_float_50 angle = 80; // 
+    boost::multiprecision::cpp_dec_float_50 angle = 80; //
 
     // Prueba de la función tan_t
     boost::multiprecision::cpp_dec_float_50 tan_result = tan_t(angle);
@@ -164,7 +165,7 @@ int main() {
     std::cout << "La raíz cuadrada de " << x_s << " es: " << sqrt_result << std::endl;
 
     // Definir el valor de x
-    decimal_50_digits x_t = 0.5;
+    decimal_50_digits x_t=0.5;
 
     // Calcular asin(x)
     decimal_50_digits asin_result = asin_t(x_t);
@@ -179,5 +180,11 @@ int main() {
 
     std::cout << "acos(" << x_t << ") = " << acos_result << std::endl;
 
+    **/
+    decimal_50_digits mat;
+    //mat = (atan_t(exp_t(-1)));
+    //mat = sinh_t(sqrt_t(2));
+    mat = root_t((cos_t(3 * divi_t(7))) + ln_t(2), 3) * divi_t(sinh_t(sqrt_t(2))) + (atan_t(exp_t(-1)));
+    std::cout << "+++++Fórmula: " << mat << std::endl;
     return 0;
 }

@@ -50,7 +50,7 @@ decimal_50_digits divi_t(decimal_50_digits a) {
 
     if (a_1 == 0) {
         cerr << "No se puede dividir por cero." << endl;
-        return 0; // Valor de retorno predeterminado
+        return NAN; // Valor de retorno predeterminado
     }
 
     if (a_1 > factorial(80) && a_1 < factorial(100))
@@ -135,14 +135,14 @@ decimal_50_digits tan_t(decimal_50_digits a)
     if (multiplo_pi(a))
     {
         cout << "Error: El valor de a no puede ser un múltiplo de pi/2." << endl;
-        return 0;
+        return NAN;
     }
 
     // Verificar si el coseno de 'a' es cero
     if (cos_t(a) == 0)
     {
         cout << "Error: La tangente de 'a' es indefinida porque el coseno de 'a' es cero." << endl;
-        return 0; // o manejar este caso de manera adecuada, dependiendo de los requisitos del problema
+        return NAN; // o manejar este caso de manera adecuada, dependiendo de los requisitos del problema
     }
 
     // Calcular la tangente de 'a'
@@ -160,7 +160,7 @@ decimal_50_digits sec_t(decimal_50_digits a) {
     // Verificar si el coseno de 'a' es cero
     if (cos_t(a) == 0) {
         cout << "Error: La función secante no está definida en este punto debido a que el coseno es cero." << endl;
-        return 0; // Retorna un valor predeterminado
+        return NAN; // Retorna un valor predeterminado
     }
 
     // Calcular la secante de 'a'
@@ -174,7 +174,7 @@ decimal_50_digits csc_t(decimal_50_digits a) {
     // Verificar si el seno de 'a' es cero
     if (sin_t(a) == 0) {
         cout << "Error: La función cosecante no está definida en este punto debido a que el seno es cero." << endl;
-        return 0; // Retorna un valor predeterminado
+        return NAN; // Retorna un valor predeterminado
     }
 
     // Calcular la cosecante de 'a'
@@ -188,13 +188,13 @@ decimal_50_digits cot_t(decimal_50_digits x) {
     // Verificar si 'x' es un múltiplo de pi/2
     if (multiplo_pi(x)) {
         cout << "Error: El valor de 'x' no puede ser un múltiplo de pi/2." << endl;
-        return 0; // o manejar este caso de manera adecuada, dependiendo de los requisitos del problema
+        return NAN; // o manejar este caso de manera adecuada, dependiendo de los requisitos del problema
     }
 
     // Verificar si el coseno de 'x' es cero
     if (cos_t(x) == 0) {
         cout << "Error: La cotangente de 'x' es indefinida porque el coseno de 'x' es cero." << endl;
-        return 0; // o manejar este caso de manera adecuada, dependiendo de los requisitos del problema
+        return NAN; // o manejar este caso de manera adecuada, dependiendo de los requisitos del problema
     }
 
     // Calcular la cotangente de 'x'
@@ -206,7 +206,7 @@ decimal_50_digits ln_t(decimal_50_digits x) {
     // Verificar si x es menor o igual a 0
     if (x <= 0) {
         std::cerr << "ln_t: Error - El argumento debe ser mayor que 0." << std::endl;
-        return 0; // Retornar un valor predeterminado en caso de error
+        return NAN; // Retornar un valor predeterminado en caso de error
     }
 
     decimal_50_digits a = (x - 1) * divi_t((x + 1)); // Calcular 'a' según la fórmula
@@ -233,7 +233,7 @@ decimal_50_digits log_t(decimal_50_digits x, decimal_50_digits y) {
     // Verificar si x es menor o igual a 0 o si la base y es menor o igual a 0
     if (x <= 0 || y <= 0) {
         std::cerr << "log_t: Error - El argumento y la base deben ser mayores que 0." << std::endl;
-        return 0; // Retornar un valor predeterminado en caso de error
+        return NAN; // Retornar un valor predeterminado en caso de error
     }
 
     // Calcular el logaritmo natural de x
@@ -245,7 +245,7 @@ decimal_50_digits log_t(decimal_50_digits x, decimal_50_digits y) {
     // Verificar si el logaritmo natural de la base es 0, lo que haría indefinido el logaritmo en base y
     if (ln_y == 0) {
         std::cerr << "log_t: Error - La base especificada produce un logaritmo indefinido." << std::endl;
-        return 0; // Retornar un valor predeterminado en caso de error
+        return NAN; // Retornar un valor predeterminado en caso de error
     }
 
     // Calcular el logaritmo en base y usando la fórmula: log_y(x) = ln(x) / ln(y)
@@ -291,7 +291,7 @@ decimal_50_digits tanh_t(decimal_50_digits x) {
     // Verificar si cosh_x es cero
     if (cosh_x == 0) {
         std::cerr << "tanh_t: Error - La función no está definida para este valor de x." << std::endl;
-        return 0; // Retornar un valor predeterminado en caso de error
+        return NAN; // Retornar un valor predeterminado en caso de error
     }
 
     // Calcular el seno hiperbólico de x
@@ -383,7 +383,7 @@ decimal_50_digits root_t(const decimal_50_digits x, const decimal_50_digits  y) 
     else
 
         std::cout << "Error: x negativa o y no entera o menor 3." << std::endl;
-    return 1;
+    return NAN;
 }
 
 
@@ -401,6 +401,78 @@ decimal_50_digits corregir_num(decimal_50_digits a)
     }
 
     return a;
+}
+
+decimal_50_digits exp_t(decimal_50_digits x) {
+    decimal_50_digits result = 1.0;
+    decimal_50_digits currentTerm = 1.0;
+    int n = 1;
+
+    while (abs(currentTerm) > tol && n < max_iterations) {
+        currentTerm *= x * divi_t(n);
+        result += currentTerm;
+        n++;
+    }
+
+    return result;
+}
+
+decimal_50_digits power_t(decimal_50_digits x, int y) {
+    decimal_50_digits result = 1.0;
+    if (y >= 0) {
+        for (int i = 0; i < y; ++i) {
+            result *= x;
+        }
+    }
+    else {
+        for (int i = 0; i < -y; ++i) {
+            result *= divi_t(x);
+        }
+    }
+    return result;
+}
+
+decimal_50_digits sqrt_t(const decimal_50_digits& x) {
+    if (x < 0) {
+        return std::numeric_limits<decimal_50_digits>::quiet_NaN();
+    }
+
+    decimal_50_digits guess = x * divi_t(2.0);
+    int iterations = 0;
+
+    while (abs(guess * guess - x) > tol && iterations < max_iterations) {
+        guess = (guess + x * divi_t(guess)) * divi_t(2.0);
+        iterations++;
+    }
+
+    return guess;
+}
+
+decimal_50_digits asin_t(decimal_50_digits x) {
+    if (x < -1 || x > 1) {
+        return NAN;
+    }
+
+    decimal_50_digits result = x;
+    decimal_50_digits currentTerm = x;
+    decimal_50_digits xSquared = x * x;
+    int n = 1;
+
+    while (abs(currentTerm) > tol && n < max_iterations) {
+        currentTerm *= (factorial(2 * n) * divi_t((pow(4, n) * pow(factorial(n), 2) * (2 * n + 1)))) * xSquared;
+        result += currentTerm;
+        n++;
+    }
+
+    return result;
+}
+
+decimal_50_digits acos_t(decimal_50_digits x) {
+    if (x < -1 || x > 1) {
+        return NAN;
+    }
+
+    return pi_t * divi_t(2) - asin_t(x);
 }
 
 
