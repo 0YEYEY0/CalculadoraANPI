@@ -1,4 +1,6 @@
 ﻿#pragma once
+#include "VentanaAyuda.h"
+
 
 namespace Calculadora {
 
@@ -12,10 +14,10 @@ namespace Calculadora {
 	/// <summary>
 	/// Resumen de Calculadora
 	/// </summary>
-	public ref class Calculadora : public System::Windows::Forms::Form
+	public ref class calculadora_funtras : public System::Windows::Forms::Form
 	{
 	public:
-		Calculadora(void)
+		calculadora_funtras(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +29,7 @@ namespace Calculadora {
 		/// <summary>
 		/// Limpiar los recursos que se estén usando.
 		/// </summary>
-		~Calculadora()
+		~calculadora_funtras()
 		{
 			if (components)
 			{
@@ -62,6 +64,7 @@ namespace Calculadora {
 	private: System::Windows::Forms::Button^ button19;
 	private: System::Windows::Forms::Button^ button20;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Button^ button21;
 
 	protected:
 
@@ -103,6 +106,7 @@ namespace Calculadora {
 			this->button19 = (gcnew System::Windows::Forms::Button());
 			this->button20 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->button21 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// ValorX
@@ -124,7 +128,7 @@ namespace Calculadora {
 			this->label2->Size = System::Drawing::Size(59, 13);
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"Valor de Y:";
-			this->label2->Click += gcnew System::EventHandler(this, &Calculadora::label2_Click);
+			this->label2->Click += gcnew System::EventHandler(this, &calculadora_funtras::label2_Click);
 			// 
 			// textBox1
 			// 
@@ -132,7 +136,7 @@ namespace Calculadora {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(100, 20);
 			this->textBox1->TabIndex = 2;
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &Calculadora::textBox1_TextChanged);
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &calculadora_funtras::textBox1_TextChanged);
 			// 
 			// textBox2
 			// 
@@ -150,7 +154,7 @@ namespace Calculadora {
 			this->button1->TabIndex = 4;
 			this->button1->Text = L"x^-1";
 			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &Calculadora::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &calculadora_funtras::button1_Click);
 			// 
 			// button2
 			// 
@@ -171,7 +175,7 @@ namespace Calculadora {
 			this->button3->TabIndex = 6;
 			this->button3->Text = L"tan(x)";
 			this->button3->UseVisualStyleBackColor = false;
-			this->button3->Click += gcnew System::EventHandler(this, &Calculadora::button3_Click);
+			this->button3->Click += gcnew System::EventHandler(this, &calculadora_funtras::button3_Click);
 			// 
 			// button4
 			// 
@@ -252,7 +256,7 @@ namespace Calculadora {
 			this->button11->TabIndex = 14;
 			this->button11->Text = L"e^x";
 			this->button11->UseVisualStyleBackColor = false;
-			this->button11->Click += gcnew System::EventHandler(this, &Calculadora::button11_Click);
+			this->button11->Click += gcnew System::EventHandler(this, &calculadora_funtras::button11_Click);
 			// 
 			// button12
 			// 
@@ -353,12 +357,23 @@ namespace Calculadora {
 			this->label1->TabIndex = 24;
 			this->label1->Text = L"Resultado";
 			// 
+			// button21
+			// 
+			this->button21->Location = System::Drawing::Point(342, 69);
+			this->button21->Name = L"button21";
+			this->button21->Size = System::Drawing::Size(75, 23);
+			this->button21->TabIndex = 25;
+			this->button21->Text = L"Ayuda";
+			this->button21->UseVisualStyleBackColor = true;
+			this->button21->Click += gcnew System::EventHandler(this, &calculadora_funtras::button21_Click);
+			// 
 			// Calculadora
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->ClientSize = System::Drawing::Size(499, 541);
+			this->Controls->Add(this->button21);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button20);
 			this->Controls->Add(this->button19);
@@ -386,7 +401,7 @@ namespace Calculadora {
 			this->Controls->Add(this->ValorX);
 			this->Name = L"Calculadora";
 			this->Text = L"Calculadora";
-			this->Load += gcnew System::EventHandler(this, &Calculadora::Calculadora_Load);
+			this->Load += gcnew System::EventHandler(this, &calculadora_funtras::Calculadora_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -406,5 +421,11 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-};
+private: System::Void button21_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+	Calculadora::VentanaAyuda^ ventanaAyuda = gcnew Calculadora::VentanaAyuda();
+	ventanaAyuda->Show();
+}
+
+	};
 }

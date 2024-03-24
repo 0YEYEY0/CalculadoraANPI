@@ -1,10 +1,10 @@
-#include "Calculadora.h"
+#include "calculadora_funtras.h"
 
 using namespace System;
 using namespace System :: Windows :: Forms;
 void main(array<String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	Calculadora::Calculadora form;
+	Calculadora::calculadora_funtras form;
 	Application::Run(% form);
 }

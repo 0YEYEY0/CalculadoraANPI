@@ -80,6 +80,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
@@ -122,19 +123,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Calculadora.cpp" />
-    <ClCompile Include="testcpp.cpp" />
+    <ClCompile Include="calculadora_funtras.cpp" />
+    <ClCompile Include="VentanaAyuda.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Calculadora.h">
+    <ClInclude Include="calculadora_funtras.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="funtras.h" />
     <ClInclude Include="Header.h" />
+    <ClInclude Include="VentanaAyuda.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Calculadora.resx">
-      <DependentUpon>Calculadora.h</DependentUpon>
+    <EmbeddedResource Include="calculadora_funtras.resx">
+      <DependentUpon>calculadora_funtras.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaAyuda.resx">
+      <DependentUpon>VentanaAyuda.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
